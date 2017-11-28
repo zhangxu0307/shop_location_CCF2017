@@ -1,0 +1,259 @@
+ssh://zhangxu@114.212.84.6:22/home/zhangxu/anaconda3/bin/python -u /home/zhangxu/shop_location/src/demo2.py
+data load finish!
+shop feature: Index(['shop_id', 'category_id', 'longitude', 'latitude', 'price', 'mall_id',
+       'mall_shop_num', 'mall_buy_num', 'shop_buy_num', 'category_id_buy_num'],
+      dtype='object')
+train user feature: Index(['user_id', 'shop_id', 'longitude', 'latitude', 'connected_wifi',
+       'max_wifi', 'weekday', 'hour', 'connected_wifi_buy_num',
+       'max_wifi_buy_num'],
+      dtype='object')
+test user feature: Index(['row_id', 'user_id', 'mall_id', 'longitude', 'latitude',
+       'connected_wifi', 'max_wifi', 'weekday', 'hour',
+       'connected_wifi_buy_num', 'max_wifi_buy_num'],
+      dtype='object')
+train num: 1138015
+test num: 483931
+shop2shop columns: Index(['mall_id', 'shop_id_x', 'longitude_x', 'latitude_x', 'shop_id_y',
+       'category_id', 'longitude_y', 'latitude_y', 'price', 'mall_shop_num',
+       'mall_buy_num', 'shop_buy_num', 'category_id_buy_num'],
+      dtype='object')
+nearest_shop columns: Index(['mall_id', 'shop_id', 'shop_id_y', 'category_id', 'longitude',
+       'latitude', 'price', 'mall_shop_num', 'mall_buy_num', 'shop_buy_num',
+       'category_id_buy_num', 'distance', 'rn'],
+      dtype='object')
+train_all feature: Index(['category_id', 'category_id_buy_num', 'connected_wifi',
+       'connected_wifi_buy_num', 'hour', 'label', 'latitude_x', 'latitude_y',
+       'longitude_x', 'longitude_y', 'mall_buy_num', 'mall_id',
+       'mall_shop_num', 'max_wifi', 'max_wifi_buy_num', 'price',
+       'shop_buy_num', 'shop_id', 'user_id', 'weekday'],
+      dtype='object')
+train_all num: 105749945
+test_all features: Index(['row_id', 'user_id', 'mall_id', 'longitude_x', 'latitude_x',
+       'connected_wifi', 'max_wifi', 'weekday', 'hour',
+       'connected_wifi_buy_num', 'max_wifi_buy_num', 'shop_id', 'category_id',
+       'longitude_y', 'latitude_y', 'price', 'mall_shop_num', 'mall_buy_num',
+       'shop_buy_num', 'category_id_buy_num'],
+      dtype='object')
+test_all num: 45024731
+['category_id_buy_num', 'connected_wifi_buy_num', 'hour', 'latitude_x', 'latitude_y', 'longitude_x', 'longitude_y', 'mall_buy_num', 'mall_shop_num', 'max_wifi_buy_num', 'price', 'shop_buy_num', 'weekday']
+['hour', 'weekday']
+Training LGBM model...
+[LightGBM] [Info] Number of positive: 1138015, number of negative: 104611930
+[LightGBM] [Info] Total Bins 2071
+[LightGBM] [Info] Number of data: 105749945, number of used features: 13
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] No further splits with positive gain, best gain: -inf
+[LightGBM] [Info] Trained a tree with leaves=3925 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Trained a tree with leaves=4096 and max_depth=14
+[LightGBM] [Info] Finished loading 200 models
+/home/zhangxu/shop_location/src/demo2.py:253: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  test_pre_df["pro"]=p_test
+/home/zhangxu/shop_location/src/demo2.py:254: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  test_pre_df["rn"] = test_pre_df.sort_values(['pro'], ascending=[False]).groupby("row_id").cumcount() + 1
+
+Process finished with exit code 0
